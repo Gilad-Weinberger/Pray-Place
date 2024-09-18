@@ -7,7 +7,6 @@ def home(request):
 
 def pray(request):
     pray = Pray.objects.order_by('?').first()
-    
 
     context = {
         'pray': pray
