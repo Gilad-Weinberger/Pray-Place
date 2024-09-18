@@ -1,0 +1,71 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pray Place | {{ pray.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/base/pray.css' %}" />
+    <meta http-equiv="refresh" content="1" />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/all.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-duotone-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-thin.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-solid.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-regular.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://site-assets.fontawesome.com/releases/v6.6.0/css/sharp-light.css"
+    />
+  </head>
+  <body>
+    <div
+      class="main"
+      style="background-image: url('{{ MEDIA_URL }}{{pray.image.url}}');"
+    >
+      <h1 class="name">{{ pray.name }}</h1>
+      <p class="description">{{ pray.description }}</p>
+    </div>
+    <div class="main-placeholder"></div>
+    <div class="details">
+      <h1 class="title">מידע על בית הכנסת</h1>
+      <div class="item">
+        <i class="fa-regular fa-phone"></i>
+        <p class="detail">{{ pray.phone }}</p>
+      </div>
+      <div class="item">
+        <i class="fa-regular fa-envelope"></i>
+        <p class="detail">{{ pray.email }}</p>
+      </div>
+      <div class="item">
+        <i class="fa-regular fa-location-dot"></i>
+        <p class="detail">{{ pray.address }}</p>
+      </div>
+      <div class="item">
+        <i class="fa-regular fa-clock"></i>
+        <p class="detail">{{ pray.phone }}</p>
+      </div>
+    </div>
+    <div class="events">
+      <div class="title">אירועים קרובים</div>
+      {% for event in events %}
+      <div class="event"></div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
