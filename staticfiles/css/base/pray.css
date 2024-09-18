@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+body {
+  margin: 0;
+  font-family: "Rubik";
+  direction: rtl;
+}
+body .main {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: white;
+}
+body .main-placeholder {
+  height: 100vh;
+}
+body .details {
+  z-index: 1;
+  background-color: white;
+  width: calc(100% - 80px);
+  height: 100vh;
+  padding: 40px;
+}
+body .details .title {
+  margin: 0px 0px 20px 0px;
+}
+body .details .item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+body .details .item i {
+  margin-left: 10px;
+  font-size: 16px;
+}
+body .details .item .detail {
+  font-size: 16px;
+  margin: 0px;
+}/*# sourceMappingURL=pray.css.map */
